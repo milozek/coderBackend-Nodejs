@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Camilo",
+        "lastname": "Karp",
+        "course": "Nodejs",
+        "age": 27,
+        "mail": "camilokarp@hotmail.com",
+        "sex": "M"
+    },
+    {
+        "name": "Lola",
+        "lastname": "Mora",
+        "course": "Nodejs",
+        "age": 27,
+        "mail": "lolimo@hotmail.com",
+        "sex": "F"
+    },
+    {
+        "name": "Collie",
+        "lastname": "Core",
+        "course": "Nodejs",
+        "age": 29,
+        "mail": "collico@hotmail.com",
+        "sex": "M"
+    },
+    {
+        "name": "Camila",
+        "lastname": "Miranda",
+        "course": "Nodejs",
+        "age": 26,
+        "mail": "camimi@hotmail.com",
+        "sex": "F"
+    },
+    {
+        "name": "Memi",
+        "lastname": "Moni",
+        "course": "Nodejs",
+        "age": 25,
+        "mail": "memo@hotmail.com",
+        "sex": "F"
+    }
+]

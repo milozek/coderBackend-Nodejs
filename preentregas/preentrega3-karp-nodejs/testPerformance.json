@@ -1,0 +1,63 @@
+{
+    "aggregate": {
+        "counters": {
+            "vusers.created_by_name.Sessions Flow (register + login)": 200,
+            "vusers.created": 200,
+            "http.requests": 200,
+            "errors.ECONNREFUSED": 200,
+            "vusers.failed": 200
+        },
+        "rates": {
+            "http.request_rate": 10
+        },
+        "firstCounterAt": 1706732400160,
+        "lastCounterAt": 1706732419966,
+        "firstMetricAt": 1706732400160,
+        "lastMetricAt": 1706732419966,
+        "period": 1706732410000,
+        "summaries": {},
+        "histograms": {}
+    },
+    "intermediate": [
+        {
+            "counters": {
+                "vusers.created_by_name.Sessions Flow (register + login)": 100,
+                "vusers.created": 100,
+                "http.requests": 100,
+                "errors.ECONNREFUSED": 100,
+                "vusers.failed": 100
+            },
+            "rates": {
+                "http.request_rate": 10
+            },
+            "http.request_rate": null,
+            "firstCounterAt": 1706732400160,
+            "lastCounterAt": 1706732409966,
+            "firstMetricAt": 1706732400160,
+            "lastMetricAt": 1706732409966,
+            "period": "1706732400000",
+            "summaries": {},
+            "histograms": {}
+        },
+        {
+            "counters": {
+                "vusers.created_by_name.Sessions Flow (register + login)": 100,
+                "vusers.created": 100,
+                "http.requests": 100,
+                "errors.ECONNREFUSED": 100,
+                "vusers.failed": 100
+            },
+            "rates": {
+                "http.request_rate": 10
+            },
+            "http.request_rate": null,
+            "firstCounterAt": 1706732410156,
+            "lastCounterAt": 1706732419966,
+            "firstMetricAt": 1706732410156,
+            "lastMetricAt": 1706732419966,
+            "period": "1706732410000",
+            "summaries": {},
+            "histograms": {}
+        }
+    ]
+}

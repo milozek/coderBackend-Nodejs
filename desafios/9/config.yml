@@ -1,0 +1,37 @@
+config:
+    plugins:
+        metrics-by-endpoint: {}
+    target: "http://localhost:8080"
+    phases:
+        - duration: 20
+          arrivalRate: 10
+scenarios:
+    - name: "Sessions Flow (register + login)"
+      flow:
+          - log: "Creating vars for testing user"
+          - get:
+                url: "/api/test/user"
+                capture: #save this fields for future reqs
+                    - json: "$.first_name"
+                      as: "first_name"
+                    - json: "$.last_name"
+                      as: "last_name"
+                    - json: "$.email"
+                      as: "email"
+                    - json: "$.password"
+                      as: "password"
+          - log: "Registering user"
+          - post:
+                url: "/api/sessions/register"
+                json: #represents the body we send to the req
+                    first_name: "{{first_name}}"
+                    last_name: "{{last_name}}"
+                    email: "{{email}}"
+                    password: "{{password}}"
+          - think: 2 #simulating 2 seconds of await from the user between register and login
+          - log: "Login user"
+          - post:
+                url: "/api/sessions/register"
+                json:
+                    email: "{{email}}"
+                    password: "{{password}}"
