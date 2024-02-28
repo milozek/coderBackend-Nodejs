@@ -28,6 +28,9 @@ scenarios:
                     last_name: "{{last_name}}"
                     email: "{{email}}"
                     password: "{{password}}"
+                capture:
+                    - json: "$._id"
+                      as: "id"
           - think: 2 #simulating 2 seconds of await from the user between register and login
           - log: "Login user"
           - post:
