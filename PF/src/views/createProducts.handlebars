@@ -1,0 +1,32 @@
+<article>
+  <form action="/api/product" method="post" enctype="application/json">
+    <header>Add products</header>
+    <input type="text" name="title" placeholder="title" required />
+    <input
+      type="text"
+      name="description"
+      placeholder="  description"
+      required
+    />
+    <input type="text" name="thumbnail" placeholder="thumbnail" required />
+    <input type="number" name="price" placeholder="price" required />
+    <input type="text" name="code" placeholder="code" required />
+    <input type="number " name="stock" placeholder="stock" required />
+
+    <footer>
+      <input type="submit" value="Add" />
+    </footer>
+    <a href="/api/profile">Back to home</a>
+  </form>
+</article>
+<script>
+  document.querySelector('form').addEventListener('submit', async function
+  (event) { event.preventDefault(); const formData = { title:
+  document.querySelector('input[name="title"]').value, description:
+  document.querySelector('input[name="description"]').value, thumbnail:
+  document.querySelector('input[name="price"]').value, code:
+  document.querySelector('input[name="code"]').value, stock:
+  document.querySelector('input[name="stock"]').value, }; const response = await
+  fetch('/api/product', { method: 'POST', headers: { 'Content-Type':
+  'application/json', }, body: JSON.stringify({ data: formData }), }); });
+</script>

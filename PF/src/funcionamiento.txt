@@ -1,0 +1,60 @@
+Aquí tienes el texto organizado de manera más legible:
+
+**Funcionamiento:**
+
+**Productos:**
+
+- Obtener Productos
+  - Método: GET
+  - Ruta: http://localhost:8080/api/products
+
+- Obtener Producto por ID
+  - Método: GET
+  - Ruta: http://localhost:8080/api/products/:sid
+
+- Crear un Producto
+  - Método: POST
+  - Ruta: http://localhost:8080/api/products
+
+- Actualizar Producto
+  - Método: PUT
+  - Ruta: http://localhost:8080/api/products/:sid
+
+- Borrar Producto por ID
+  - Método: DELETE
+  - Ruta: http://localhost:8080/api/products/:sid
+
+**WEBSOCKET:**
+- http://localhost:8080/apiCart/realtimeproducts
+
+**Carritos:**
+
+- Crear Carrito
+  - Método: POST
+  - Ruta: http://localhost:8080/apiCart/carts
+
+- Obtener Carrito por ID
+  - Método: GET
+  - Ruta: http://localhost:8080/apiCart/carts/:pdi
+
+- Eliminar Carrito
+  - Método: DELETE
+  - Ruta: http://localhost:8080/apiCart/carts/:pid
+
+- Agregar Producto al Carrito
+  - Método: POST
+  - Ruta: http://localhost:8080/apiCart/:cdi/carts/:pid
+
+**Vistas:**
+
+- Inicio
+  - Método: GET
+  - Ruta: http://localhost:8080/
+
+- Mostrar Productos
+  - Método: GET
+  - Ruta: http://localhost:8080/products
+
+- Chat
+  - Método: GET
+  - Ruta: http://localhost:8080/chat

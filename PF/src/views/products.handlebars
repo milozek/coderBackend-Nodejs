@@ -1,0 +1,65 @@
+<main>
+
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; } th,
+    td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+    button { background-color: #4CAF50; color: white; border: none; padding: 5px
+    10px; text-align: center; text-decoration: none; display: inline-block;
+    font-size: 14px; margin: 2px 2px; cursor: pointer; }
+  </style>
+  {{#if admin}}
+    <header>
+      <a href="/api/products" role="button">Create product</a>
+    </header>
+  {{/if}}
+
+  {{#if premium}}
+    <header>
+      <a href="/api/products" role="button">Create product</a>
+    </header>
+  {{/if}}
+  <br />
+  <header>
+    <a href="/api/editUser" role="button">Update user</a>
+  </header>
+
+  <h2>Hello, welcome {{name}}</h2>
+  <h1>Products</h1>
+
+  <header>
+    <a href="/api/cartsview/{{user}}" role="button">Show cart</a>
+  </header>
+  <article>
+    <table>
+      <tr>
+        <th>Title</th>
+
+        <th>Action</th>
+      </tr>
+      {{#each payload}}
+        <tr>
+          <td>{{this.title}}</td>
+          <td>{{this.price}}</td>
+
+          <td>
+            <button
+              onclick="buyProduct({{this._id}})"
+              data-product-id="{{this._id}}"
+            >Buy</button>
+          </td>
+
+        </tr>
+      {{/each}}
+    </table>
+    <p>Current page: {{page}}</p>
+    <a href="{{prevLink}}" role="button">Previous</a>
+    <a href="{{nextLink}}" role="button">Next</a>
+  </article>
+  <header>
+    <a href="/logout" role="button">Exit</a>
+  </header>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="/js/products.js"></script>

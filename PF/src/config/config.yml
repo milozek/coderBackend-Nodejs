@@ -1,0 +1,36 @@
+config:
+  plugins:
+    metrics-by-endpoint: {}
+  target: "http://localhost:8080"
+  phases:
+    - duration: 20
+      arrivalRate: 10
+
+scenarios:
+  - name: "Create an user and get by id"
+    flow:
+      - log: "Get user from faker"
+      - get:
+          url: "/faker"
+          capture:
+            - json: "$.first_name"
+              as: "first_name"
+            - json: "$.last_name"
+              as: "last_name"
+            - json: "$.age"
+              as: "age"
+            - json: "$.email"
+              as: "email"
+            - json: "$.password"
+              as: "password"
+
+      - log: "Create new user"
+
+      - post:
+          url: "/sessions/register"
+          json:
+            first_name: "{{ first_name }}"
+            last_name: "{{ last_name }}"
+            age: "{{ age }}"
+            email: "{{ email }}"
+            password: "{{ password }}"

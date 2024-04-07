@@ -1,0 +1,9 @@
+<body>
+  <h1>Change password</h1>
+  <form action="/api/reset-password?token={{token}}" method="post">
+    <h2>New password</h2>
+
+    <input type="password" id="passwordNew" name="passwordNew" required />
+    <button type="submit">Change password</button>
+  </form>
+</body>
